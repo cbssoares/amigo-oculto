@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigo Oculto</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="estilos/interface.css">
 </head>
 <body>
     <h1> AMIGO OCULTO</h1>
     <main>
         <section id="menu">
-            <form method="post" autocomplete="on">
                 <p id="nomebot">
-                    <input type="text" name="nomeinp" id="nomeinp" minlength="3" placeholder="Digite o nome do particpante" autocomplete="username">
-                    <input type="submit" value="Enviar" id="botao" class="bota" onclick="namesave()">
+                    <input type="text" name="nomeinp" id="nomeinp" minlength="3" placeholder="Digite o nome do participante" required>
+                    <input type="button" value="Enviar" id="botao" class="bota" onclick="namesave()">
                 </p>
-            </form>
             <div class="contadorp">
                 <p id="mainfooter"> </p>
-                <a href="#" id="proxeta" class="bota" onclick="mudarmain()"> concluido</a>
+                <a href="#" id="proxeta" class="bota" onclick="mudarmain()">Concluido</a>
             </div>
         </section>
 
@@ -28,12 +28,9 @@
                 <ul id="namelist1">
                 </ul>
             </p>
-
-            <p><ul id="namelist2">
-
-            </ul></p>
         </section>
     </main>
+
     <script src="mecanismo.js"></script>
 </body>
 </html>

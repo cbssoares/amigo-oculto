@@ -29,11 +29,9 @@ body > h1 {
 
  /* MAIN */
 main{
-    display: flex;
-    flex-flow: column;
-    background-color: white;
+    background-color: gold;
     padding: 0px 0px 400px 0px;
-    width: 100vw;
+    width: 95vw;
     height: 500px;
     margin: auto;
     margin-bottom: 20px;
@@ -79,7 +77,10 @@ main{
    margin: 5px;
  }
 
+ /* BOTÃO CONCLUIDO */
  #proxeta{
+   font-size: 16px;
+   text-align: center;
  }
 
  .bota{
@@ -101,24 +102,34 @@ main{
     background-color: rgb(4, 173, 4);
  }
 
-
-#sectlist{
+ /* Lista */
+section#sectlist{
+   display: flex ;
+   justify-content: flex-end;
    margin: auto;
    font-family: 'Changa One', cursive;
    height: 300px;
 }
 
-#cu ul{
-   margin: auto;
+ul{
    padding: 20px 0px 20px 20px;
-   height: 20px;
-   font-size: 1.15em;
+   height: 370px;
+   width: 50%;
+   font-size: 1.13em;
    font-weight: lighter;
    list-style-position: inside;
-   columns: 3;
+   display: flex;
+   flex-flow: column;
+   overflow: scroll;
+   align-items: center;
+   list-style-image: url(card_giftcard_black_24dp.svg);
+   background-color: white;
  }
 
+
+
  li{
-   padding: 5px;
+   padding-bottom: 6px;
    text-decoration: underline;
  }
+

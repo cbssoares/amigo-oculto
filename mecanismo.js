@@ -11,21 +11,15 @@ function namesave(){
     nome[contador1] = nominp.value
     if (nominp.value == ''){
         window.alert('Nome Não inserido')
-    } else if(contador1 > 12){
-        lista = document.querySelector('ul#namelist2')
+    } else {
+        lista = document.querySelector('ul#namelist1')
         lista.innerHTML += `<li>${nome[contador1]}`
         contador1++
         nominp.value = ""
-        document.querySelector('p#mainfooter').innerHTML = `${contador1} Participantes >`
+        document.querySelector('p#mainfooter').innerHTML = `${contador1} Participantes `
     }
-    else{
-        lista = document.querySelector('ul#namelist2')
-        lista.innerHTML += `<li>${nome[contador1]}`
-        contador1++
-        nominp.value = ""
-        document.querySelector('p#mainfooter').innerHTML = `${contador1} Participantes">`
-
-    }
+    
+    
 }
 
 function mudarmain(){
