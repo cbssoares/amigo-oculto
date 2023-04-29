@@ -5,50 +5,55 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
+
+/* MOBILE */
+
 
 body{
-    background-color: #A50B25;
-    background-image: url('wallpaperflare.com_wallpaper.jpg');
-    background-attachment: fixed;
-    text-align: center;
+   background: url(wallpaperflare.com_wallpaper.jpg) #A50B25 fixed ;
 }
 
+/* TITULO  */
 body > h1 {
+   text-align: center;
    font-family: 'Mountains of Christmas', cursive;
    color: gold;
-   font-size: 5vw;
+   font-size: 3em;
    padding: 20px 20px 10px 20px;
    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.726);
    
 }
 
+
+ /* MAIN */
 main{
+    display: flex;
+    flex-flow: column;
     background-color: white;
     padding: 0px 0px 400px 0px;
-    min-width: 200px;
-    max-width: 600px;
-    height: 100px;
+    width: 100vw;
+    height: 500px;
     margin: auto;
     margin-bottom: 20px;
     text-align: left;
     border-radius: 11px;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
-    font-size: 20px;
-    
+    font-size: 20px; 
+   
 }
 
+/* SEÇÃO DE DIGITAÇÃO  */
 #menu{
-    padding: 20px;
-    border-radius: 10px 10px 0px 0px;
-    background-color:gold;
-    font-family: 'Changa One', cursive;
- }
-
- #menu > h1{
-   font-weight: normal;
-   padding: 5px;
-   text-align: center;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   align-content: center;
+   padding: 20px;
+   border-radius: 10px 10px 0px 0px;
+   background-color:gold;
+   font-family: 'Changa One', cursive;
  }
 
  input{
@@ -62,7 +67,19 @@ main{
     padding: 5px 5px 5px 5px;
     border-radius: 10px;
     margin: auto;
+    margin-bottom: 10px;
     width: fit-content;
+ }
+
+ div.contadorp{
+   display: flex;
+ }
+
+ p#mainfooter{
+   margin: 5px;
+ }
+
+ #proxeta{
  }
 
  .bota{
@@ -73,18 +90,22 @@ main{
     border: 0px;
     width: 100px;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.452);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 0.5;
+    text-decoration: none;
  }
 
- #botao:hover{
+ .bota:hover{
     cursor: pointer;
+    background-color: rgb(4, 173, 4);
  }
+
 
 #sectlist{
    margin: auto;
-   padding: 20px 58px 100px 58px;
-   width: 500px;
-   height: 200px;
    font-family: 'Changa One', cursive;
+   height: 300px;
 }
 
 #cu ul{
@@ -101,15 +122,3 @@ main{
    padding: 5px;
    text-decoration: underline;
  }
- section#cu{
-   padding: 10px 0px 10px 0px;
-   background-color: gold;
-   left: 42%;
-   top: 87.2%;
-   border-radius: 0px 0px 10px 10px;
-   text-align: center;
-   font-family: 'Changa One', cursive;
- }
-
- 
- 
