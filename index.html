@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Oculto</title>
+    <link rel="stylesheet" href="estilos/interface.css">
+</head>
+<body>
+    <h1> AMIGO OCULTO</h1>
+    <main>
+        <section id="menu">
+            <form action="" method="post" autocomplete="on">
+                <p id="nomebot">
+                    <input type="text" name="nomeinp" id="nomeinp" minlength="3" placeholder="Digite o nome do particpante" autocomplete="username">
+                    <input type="submit" value="Enviar" id="botao" class="bota" onclick="namesave()">
+                </p>
+            </form>
+        </section>
+
+        <section id="sectlist">
+            <p>
+                <ul id="namelist1">
+                </ul>
+            </p>
+
+            <p><ul id="namelist2">
+
+            </ul></p>
+        </section>
+
+       <section id="cu">
+        <p id="mainfooter"> </p>
+       </section>
+        
+    </main>
+    <script src="mecanismo.js"></script>
+</body>
+</html>
