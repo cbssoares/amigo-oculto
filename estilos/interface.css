@@ -132,3 +132,10 @@ ul{
    text-decoration: underline;
  }
 
+  /* Celulares com telas muito Pequenas */
+ @media screen and (max-width:374px ) {
+   ul{
+      height: 105%;
+   }  
+ }
+
