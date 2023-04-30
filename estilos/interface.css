@@ -2,6 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Mountains+of+Christmas:wght@400;700&display=swap');
 
+
+/*Typical Device Breakpoints
+Pequenas telas : até 600px
+Celular: de 600px atpe 768px
+Tablet: 768px até 992px
+Desktop:992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
 *{
     padding: 0px;
     margin: 0px;
@@ -31,7 +40,7 @@ body > h1 {
 main{
     background-color: gold;
     padding: 0px 0px 400px 0px;
-    width: 95vw;
+    width: 480px;
     height: 500px;
     margin: auto;
     margin-bottom: 20px;
@@ -138,4 +147,29 @@ ul{
       height: 105%;
    }  
  }
+
+/* Tablet */
+
+@media screen  and  (min-width: 768px){
+
+   body > h1 {
+      font-size: 3.7em;
+   }
+   main{
+      width: 500px;
+   }
+   
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 992px){
+   body > h1 {
+      font-size: 4.5em;
+   }
+
+   main {
+      width: 600px;
+   }
+}
 
