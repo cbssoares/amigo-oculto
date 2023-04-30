@@ -105,7 +105,7 @@ main{
  /* Lista */
 section#sectlist{
    display: flex ;
-   justify-content: flex-end;
+   justify-content: center;
    margin: auto;
    font-family: 'Changa One', cursive;
    height: 300px;
@@ -113,13 +113,13 @@ section#sectlist{
 
 ul{
    padding: 20px 0px 20px 20px;
-   height: 370px;
-   width: 50%;
+   height: 120%;
+   width: 90%;
    font-size: 1.13em;
    font-weight: lighter;
    list-style-position: inside;
    display: flex;
-   flex-flow: column;
+   flex-flow: column wrap;
    overflow: scroll;
    align-items: center;
    list-style-image: url(card_giftcard_black_24dp.svg);
