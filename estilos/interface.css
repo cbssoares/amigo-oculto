@@ -40,7 +40,7 @@ body > h1 {
 main{
     background-color: gold;
     padding: 0px 0px 400px 0px;
-    width: 480px;
+    width: 95vw;
     height: 500px;
     margin: auto;
     margin-bottom: 20px;
@@ -143,6 +143,12 @@ ul{
 
   /* Celulares com telas muito Pequenas */
  @media screen and (max-width:374px ) {
+
+   main{
+      width: 93vw;
+   }
+
+
    ul{
       height: 105%;
    }  
