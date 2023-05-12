@@ -11,15 +11,15 @@
 </head>
 <body>
     <h1> AMIGO OCULTO</h1>
-    <main>
-        <section id="menu">
+    <main class="principal visivel">
+        <section class ="menu">
                 <p id="nomebot">
-                    <input type="text" name="nomeinp" id="nomeinp" minlength="3" placeholder="Digite o nome do participante" required>
+                    <input type="text" name="nomeinp" id="nomeinp" class="input-texto" minlength="3" placeholder="Digite o nome do participante" required>
                     <input type="button" value="Enviar" id="botao" class="bota" onclick="namesave()">
                 </p>
             <div class="contadorp">
                 <p id="mainfooter"> </p>
-                <a href="#" id="proxeta" class="bota" onclick="mudarmain()">Concluido</a>
+                <input type="button" id="proxeta" class="bota" onclick="mudarmain()" value="concluido">
             </div>
         </section>
 
@@ -28,6 +28,14 @@
                 <ul id="namelist1">
                 </ul>
             </p>
+        </section>
+    </main>
+    <!-- Tela de resultado -->
+     <main class="main_resultado invisivel">
+        <section class="menu menu-resultado">
+            <select name="" id="opcoes" class="input-texto">
+               <option value="oi">oi</option>
+            </select>
         </section>
     </main>
 

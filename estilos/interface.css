@@ -51,8 +51,17 @@ main{
    
 }
 
+/* MAIN PAGINA 2 */
+.invisivel{
+   display: none;
+}
+
+.visivel{
+   display:block ;
+}
+
 /* SEÇÃO DE DIGITAÇÃO  */
-#menu{
+.menu{
    display: flex;
    flex-flow: column;
    align-items: center;
@@ -63,7 +72,7 @@ main{
    font-family: 'Changa One', cursive;
  }
 
- input{
+ input, .input-texto{
     padding: 5px;
     margin: 5px;
  }
