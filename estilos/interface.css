@@ -21,7 +21,8 @@ Grandes telas: acima de 1200px
 
 
 body{
-   background: url(wallpaperflare.com_wallpaper.jpg) #A50B25 fixed ;
+   background: url(wallpaperflare.com_wallpaper.jpg) #A50B25 no-repeat fixed  ;
+   background-size: cover;
 }
 
 /* TITULO  */
@@ -39,11 +40,12 @@ body > h1 {
  /* MAIN */
 main{
     background-color: gold;
-    padding: 0px 0px 400px 0px;
-    width: 95vw;
-    height: 500px;
+    width: 93vw;
+    max-width: 400px;
+    min-height: 350px;
+    height: calc(100vh - 150px);
+    max-height: 500px ;
     margin: auto;
-    margin-bottom: 20px;
     text-align: left;
     border-radius: 11px;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
@@ -77,7 +79,7 @@ main{
     margin: 5px;
  }
 
- p#nomebot{
+.menu_nomebot{
     background-color: #A50B25;
     text-align: center;
     padding: 5px 5px 5px 5px;
@@ -87,19 +89,15 @@ main{
     width: fit-content;
  }
 
- div.contadorp{
+ .contadorp{
    display: flex;
  }
 
- p#mainfooter{
+ .informador-npessoas{
    margin: 5px;
  }
 
  /* BOTÃO CONCLUIDO */
- #proxeta{
-   font-size: 16px;
-   text-align: center;
- }
 
  .bota{
     padding: 5px;
@@ -121,23 +119,31 @@ main{
  }
 
  /* Lista */
-section#sectlist{
+
+
+.container_lista{
    display: flex ;
    justify-content: center;
    margin: auto;
    font-family: 'Changa One', cursive;
-   height: 300px;
 }
 
-ul{
-   padding: 20px 0px 20px 20px;
-   height: 120%;
-   width: 90%;
+#sectlist{
+   margin: auto;
+   height: 50%;
+}
+
+.container_lista, #namelist{
+   height: 100%;
+}
+
+#namelist {
+   width: 80%;
    font-size: 1.13em;
    font-weight: lighter;
    list-style-position: inside;
    display: flex;
-   flex-flow: column wrap;
+   flex-flow: column ;
    overflow: scroll;
    align-items: center;
    list-style-image: url(card_giftcard_black_24dp.svg);
@@ -150,19 +156,12 @@ ul{
    text-decoration: underline;
  }
 
-  /* Celulares com telas muito Pequenas */
- @media screen and (max-width:374px ) {
-
-   main{
-      width: 93vw;
+/* CELULARES UM POUCO MAIS LARGOS */
+@media (min-width: 383px) {
+   #sectlist{
+      height: 60%;
    }
-
-
-   ul{
-      height: 105%;
-   }  
- }
-
+}
 /* Tablet */
 
 @media screen  and  (min-width: 768px){
@@ -170,8 +169,9 @@ ul{
    body > h1 {
       font-size: 3.7em;
    }
-   main{
-      width: 500px;
+
+   main {
+      max-width: 500px;
    }
    
 }
@@ -181,10 +181,6 @@ ul{
 @media screen and (min-width: 992px){
    body > h1 {
       font-size: 4.5em;
-   }
-
-   main {
-      width: 600px;
    }
 }
 

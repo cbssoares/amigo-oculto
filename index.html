@@ -11,31 +11,34 @@
 </head>
 <body>
     <h1> AMIGO OCULTO</h1>
-    <main class="principal visivel">
+    <main class="principal main_inicio visivel">
         <section class ="menu">
-                <p id="nomebot">
-                    <input type="text" name="nomeinp" id="nomeinp" class="input-texto" minlength="3" placeholder="Digite o nome do participante" required>
-                    <input type="button" value="Enviar" id="botao" class="bota" onclick="namesave()">
-                </p>
+                    <div id="nomebot" class="menu_nomebot">
+                        <input type="text" name="nomeinp" id="nomeinp" class="input-texto" minlength="3" placeholder="Digite o nome do participante" required>
+                        <input type="button" value="Enviar" id="botao" class="bota" onclick="namesave()">
+                    </div>
             <div class="contadorp">
-                <p id="mainfooter"> </p>
+                <p id="main_info_num_pessoas" class="informador-npessoas"> 0 Participantes</p>
                 <input type="button" id="proxeta" class="bota" onclick="mudarmain()" value="concluido">
             </div>
         </section>
 
         <section id="sectlist">
-            <p>
-                <ul id="namelist1">
-                </ul>
-            </p>
+            
+                <div class="container_lista">
+                    <ul id="namelist">
+                    </ul>
+                </div>
         </section>
     </main>
     <!-- Tela de resultado -->
-     <main class="main_resultado invisivel">
+     <main class="principal resultado invisivel">
         <section class="menu menu-resultado">
-            <select name="" id="opcoes" class="input-texto">
-               <option value="oi">oi</option>
-            </select>
+            <div class="menu_nomebot">
+                <select name="" id="opcoes" class="input-texto">
+                    <option value="" disabled selected hidden>Selecione o Nome do Participante</option>
+                </select>
+            </div>
         </section>
     </main>
 
