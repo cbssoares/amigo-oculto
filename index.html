@@ -19,7 +19,7 @@
                     </div>
             <div class="contadorp">
                 <p id="main_info_num_pessoas" class="informador-npessoas"> 0 Participantes</p>
-                <input type="button" id="proxeta" class="bota" onclick="mudarmain()" value="concluido">
+                <input type="button" id="proxeta" class="bota" onclick="telaResultado()" value="concluido">
             </div>
         </section>
 
@@ -31,6 +31,7 @@
                 </div>
         </section>
     </main>
+
     <!-- Tela de resultado -->
      <main class="principal resultado invisivel">
         <section class="menu menu-resultado">
@@ -38,6 +39,13 @@
                 <select name="" id="opcoes" class="input-texto">
                     <option value="" disabled selected hidden>Selecione o Nome do Participante</option>
                 </select>
+                <input type="button" value="Pronto" class="bota" onclick="sorteio()">
+                <input type="button" value="Voltar" class="bota" onclick="voltarMain()">
+            </div>
+        </section>
+        <section>
+            <div class="container sorteado_container">
+                
             </div>
         </section>
     </main>

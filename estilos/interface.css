@@ -156,6 +156,7 @@ main{
    text-decoration: underline;
  }
 
+
 /* CELULARES UM POUCO MAIS LARGOS */
 @media (min-width: 383px) {
    #sectlist{
