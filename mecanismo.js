@@ -31,7 +31,7 @@ function namesave(){
 }
 
 
-function  roleta() {
+/* function  roleta() {
     nome.sort(() => Math.random() - 0.5)
     for(contador1 = 0; contador1 < loop; contador1++){
         contador2 = contador1 + 1
@@ -39,11 +39,8 @@ function  roleta() {
             contador2 = 0
         }
         amig[contador1] = {rem:nome[contador1] , des: nome[contador2]}
-    }
-       
-
-
-}
+    }      
+} */
 
 
 function telaResultado() {
@@ -52,6 +49,14 @@ function telaResultado() {
         mainPrinc.remove('visivel')
         mainResul.add('visivel') 
         mainPrinc.add('invisivel')
+        nome.sort(() => Math.random() - 0.5)
+        for(contador1 = 0; contador1 < loop; contador1++){
+            contador2 = contador1 + 1
+            if(contador2 == loop){
+                contador2 = 0
+            }
+            amig[contador1] = {rem:nome[contador1] , des: nome[contador2]}
+        }      
          
     } else{
         window.alert('Nenhum nome foi inserido')
@@ -65,3 +70,20 @@ function voltarMain() {
     mainPrinc.add('visivel')
 }
 
+contador3 = 0
+
+function mostrarResultado() {
+    op = selectOp.value
+    destinatario = amig.find (remname => remname.rem === op)
+    if( contador3 > 0){
+        document.querySelector('.resultado_amigo').innerHTML = ''
+    }
+    document.querySelector('.resultado_amigo').innerHTML += `${destinatario.des}`
+    contador3++
+
+}
+
+function sumirResultado() {
+    document.querySelector('.resultado_amigo').innerHTML = ''
+    contador3 = 0
+}

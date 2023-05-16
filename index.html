@@ -24,8 +24,7 @@
         </section>
 
         <section id="sectlist">
-            
-                <div class="container_lista">
+                <div class="container container_lista">
                     <ul id="namelist">
                     </ul>
                 </div>
@@ -36,16 +35,17 @@
      <main class="principal resultado invisivel">
         <section class="menu menu-resultado">
             <div class="menu_nomebot">
-                <select name="" id="opcoes" class="input-texto">
+                <select name="" id="opcoes" class="input-texto" onchange="sumirResultado()">
                     <option value="" disabled selected hidden>Selecione o Nome do Participante</option>
                 </select>
-                <input type="button" value="Pronto" class="bota" onclick="sorteio()">
                 <input type="button" value="Voltar" class="bota" onclick="voltarMain()">
+                <input type="button" value="Pronto" class="bota" onclick="mostrarResultado()">
             </div>
         </section>
-        <section>
+        <section class="secao_resultado">
             <div class="container sorteado_container">
-                
+                <h2>Seu amigo Oculto é:</h2>
+                <p class='resultado_amigo'></p>
             </div>
         </section>
     </main>
