@@ -156,6 +156,10 @@ main{
    text-decoration: underline;
  }
 
+.menu_resultado{
+   align-items: center;
+}
+
  .secao_resultado{
    height: 60%;
  }
