@@ -26,7 +26,7 @@ body{
 }
 
 /* TITULO  */
-body > h1 {
+.titulo_header {
    text-align: center;
    font-family: 'Mountains of Christmas', cursive;
    color: gold;
@@ -167,6 +167,9 @@ main{
    height: 100%;
    padding: 11px;
 }
+#titulo_resultado {
+   font-weight: 100;
+}
 .resultado_amigo{
    background-color: black;
 }
@@ -185,7 +188,7 @@ main{
 
 @media screen  and  (min-width: 768px){
 
-   body > h1 {
+   .titulo_header {
       font-size: 3.7em;
    }
 
@@ -198,7 +201,7 @@ main{
 /* DESKTOP */
 
 @media screen and (min-width: 992px){
-   body > h1 {
+   .titulo_header {
       font-size: 4.5em;
    }
 }
