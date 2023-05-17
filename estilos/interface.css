@@ -2,6 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Mountains+of+Christmas:wght@400;700&display=swap');
 
+@keyframes andando {
+   0% {
+      transform: translateX(-200%);
+   }
+
+   100%{
+      transform: translateX(200%);
+   }
+}
+
 
 /*Typical Device Breakpoints
 Pequenas telas : até 600px
@@ -53,14 +63,6 @@ main{
    
 }
 
-/* MAIN PAGINA 2 */
-.invisivel{
-   display: none;
-}
-
-.visivel{
-   display:block ;
-}
 
 /* SEÇÃO DE DIGITAÇÃO  */
 .menu{
@@ -156,6 +158,45 @@ main{
    text-decoration: underline;
  }
 
+ /* MAIN INTERMEDIARIA */
+
+.intermediaria section {
+   display: flex;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.div_inter{
+   padding: 10px;
+   padding: 0px;
+   width: 85%;
+   height: 85%;
+   text-align: center;
+   
+}
+
+.titulo-inter{
+   font-family: 'Mountains of Christmas', cursive;
+   font-size: 3em;
+   color: #A50B25;
+   margin-bottom: 45%;
+
+}
+
+.boneco-de-neve{
+   animation: andando 3s infinite;
+}
+
+ /* MAIN Resultado */
+.invisivel{
+   display: none;
+}
+
+.visivel{
+   display:block ;
+}
+
 .menu_resultado{
    align-items: center;
 }
@@ -170,8 +211,9 @@ main{
    width: 80%;
    height: 100%;
    padding: 11px;
+   text-align: center;
 }
-#titulo_resultado {
+.titulo {
    font-weight: 100;
 }
 .resultado_amigo{
@@ -182,6 +224,7 @@ main{
    background-color: white;
    text-decoration: underline;
 }
+
 /* CELULARES UM POUCO MAIS LARGOS */
 @media (min-width: 383px) {
    #sectlist{

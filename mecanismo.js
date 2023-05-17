@@ -5,6 +5,7 @@ let amig = []
 selectOp = document.querySelector('#opcoes')
 mainResul =  document.querySelector('.resultado').classList
 mainPrinc = document.querySelector('.main_inicio').classList
+mainInter = document.querySelector('.intermediaria').classList
 
 document.querySelector('input#nomeinp').addEventListener("keyup", function(e) {
     if (e.code === 'Enter'){
@@ -18,16 +19,15 @@ function namesave(){
         window.alert('Nome Não inserido')
     } else {
         nome[contador1] = nominp.value
-        nome2[contador1] = nomeinp.value
+        nome2[contador1] = nominp.value
+        loop = nome.length
         lista = document.querySelector('#namelist')
-        lista.innerHTML += `<li>${nome[contador1]}`
-        selectOp.innerHTML += `<option value = '${nome[contador1]}'> ${nome[contador1]} </option>` 
+        lista.innerHTML += `<li> ${nome[contador1]} `
         contador1++
         nominp.value = ""
-        document.querySelector('#main_info_num_pessoas').innerHTML = `${contador1} Participantes `
+        document.querySelector('#main_info_num_pessoas').innerHTML = `${loop} Participantes `
     }
     
-    loop = nome.length
 }
 
 
@@ -42,24 +42,43 @@ function namesave(){
     }      
 } */
 
-
-function telaResultado() {
-    if (nome.length > 0){
-        mainResul.remove('invisivel')
+function telaInter() {
+    if (nome.length > 2){
+        mainInter.remove('invisivel')
         mainPrinc.remove('visivel')
-        mainResul.add('visivel') 
+        mainInter.add('visivel') 
         mainPrinc.add('invisivel')
+        selectOp.innerHTML = ' <option value="1" disabled selected hidden>Selecione o Nome do Participante</option>'
+        for(contador1 = 0; contador1 < loop; contador1++){
+            selectOp.innerHTML += `<option value = '${nome2[contador1]}'> ${nome2[contador1]} </option>`
+        }
+
         nome.sort(() => Math.random() - 0.5)
+
         for(contador1 = 0; contador1 < loop; contador1++){
             contador2 = contador1 + 1
+
             if(contador2 == loop){
                 contador2 = 0
             }
+
             amig[contador1] = {rem:nome[contador1] , des: nome[contador2]}
-        }      
-         
+            
+        }
+        selectOp.value = '1'
+        document.querySelector('.resultado_amigo').innerHTML = ''
+        let intervalo = setInterval(telaResultado, 3000)
+
+        function telaResultado() {
+            mainInter.remove('visivel')
+            mainResul.remove('invisivel')
+            mainInter.add('invisivel') 
+            mainResul.add('visivel')
+            clearInterval(intervalo)
+        }
+        
     } else{
-        window.alert('Nenhum nome foi inserido')
+        window.alert('Quantidade de participantes insuficiente(min = 3)')
     }
 }
 
@@ -70,20 +89,12 @@ function voltarMain() {
     mainPrinc.add('visivel')
 }
 
-contador3 = 0
 
-function mostrarResultado() {
-    op = selectOp.value
-    destinatario = amig.find (remname => remname.rem === op)
-    if( contador3 > 0){
-        document.querySelector('.resultado_amigo').innerHTML = ''
-    }
-    document.querySelector('.resultado_amigo').innerHTML += `${destinatario.des}`
-    contador3++
 
-}
 
 function sumirResultado() {
+    op = selectOp.value
+    destinatario = amig.find (remname => remname.rem === op)
     document.querySelector('.resultado_amigo').innerHTML = ''
-    contador3 = 0
+    document.querySelector('.resultado_amigo').innerHTML += `${destinatario.des}`
 }

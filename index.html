@@ -21,7 +21,7 @@
                     </div>
             <div class="contadorp">
                 <p id="main_info_num_pessoas" class="informador-npessoas"> 0 Participantes</p>
-                <input type="button" id="proxeta" class="bota" onclick="telaResultado()" value="concluido">
+                <input type="button" id="proxeta" class="bota" onclick="telaInter()" value="Concluido">
             </div>
         </section>
 
@@ -33,23 +33,32 @@
         </section>
     </main>
 
+    <!-- Tela intermediaria -->
+    <main class="principal intermediaria invisivel">
+        <section>
+            <div class="div_inter">
+                <h2 class="titulo titulo-inter">Sorteando...</h2>
+                <img src="estilos/boneco de neve2.gif" alt="boneco de neve" class="boneco-de-neve">
+            </div>
+        </section>
+    </main>
+
     <!-- Tela de resultado -->
      <main class="principal resultado invisivel">
         <section class="menu menu-resultado">
             <div class="menu_nomebot">
                 <select name="" id="opcoes" class="input-texto" onchange="sumirResultado()">
-                    <option value="" disabled selected hidden>Selecione o Nome do Participante</option>
+                    <option value="1" disabled selected hidden>Selecione o Nome do Participante</option>
                 </select>
                
             </div>
             <div>
                 <input type="button" value="Voltar" class="bota" onclick="voltarMain()">
-                <input type="button" value="Pronto" class="bota" onclick="mostrarResultado()">
             </div>
         </section>
         <section class="secao_resultado">
             <div class="container sorteado_container">
-                <h2 id="titulo_resultado">Seu amigo Oculto é:</h2>
+                <p class ="titulo titulo_resultado">Selecione seu nome e passe sobre a area preta para ver seu amigo oculto:</p>
                 <p class='resultado_amigo'></p>
             </div>
         </section>
