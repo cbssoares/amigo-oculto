@@ -50,6 +50,7 @@ function telaInter() {
         mainInter.add('visivel') 
         mainPrinc.add('invisivel')
         selectOp.innerHTML = ' <option value="1" disabled selected hidden>Selecione o Nome do Participante</option>'
+        loop2 = nome2.length
         nome.sort(() => Math.random() - 0.5)
         for(contador1 = 0; contador1 < loop; contador1++){
             contador2 = contador1 + 1
@@ -61,7 +62,7 @@ function telaInter() {
             amig[contador1] = {rem:nome[contador1] , des: nome[contador2]}
             
         }
-        for(contador1 = 0; contador1 < loop; contador1++){
+        for(contador1 = 0; contador1 < loop2; contador1++){
             selectOp.innerHTML += `<option value = '${nome2[contador1]}'> ${nome2[contador1]} </option>`
         }
         selectOp.value = '1'
