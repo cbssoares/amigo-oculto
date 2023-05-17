@@ -22,13 +22,14 @@ function namesave(){
         nome2[contador1] = nominp.value
         loop = nome.length
         lista = document.querySelector('#namelist')
-        lista.innerHTML += `<li> ${nome[contador1]} `
+        lista.innerHTML += `<li> ${nome[contador1]}`
         contador1++
         nominp.value = ""
         document.querySelector('#main_info_num_pessoas').innerHTML = `${loop} Participantes `
     }
     
 }
+
 
 
 /* function  roleta() {
@@ -49,12 +50,7 @@ function telaInter() {
         mainInter.add('visivel') 
         mainPrinc.add('invisivel')
         selectOp.innerHTML = ' <option value="1" disabled selected hidden>Selecione o Nome do Participante</option>'
-        for(contador1 = 0; contador1 < loop; contador1++){
-            selectOp.innerHTML += `<option value = '${nome2[contador1]}'> ${nome2[contador1]} </option>`
-        }
-
         nome.sort(() => Math.random() - 0.5)
-
         for(contador1 = 0; contador1 < loop; contador1++){
             contador2 = contador1 + 1
 
@@ -64,6 +60,9 @@ function telaInter() {
 
             amig[contador1] = {rem:nome[contador1] , des: nome[contador2]}
             
+        }
+        for(contador1 = 0; contador1 < loop; contador1++){
+            selectOp.innerHTML += `<option value = '${nome2[contador1]}'> ${nome2[contador1]} </option>`
         }
         selectOp.value = '1'
         document.querySelector('.resultado_amigo').innerHTML = ''
