@@ -148,16 +148,28 @@ main{
    flex-flow: column ;
    overflow: scroll;
    align-items: center;
+   row-gap: 5px;
    list-style-image: url(card_giftcard_black_24dp.svg);
    background-color: white;
    box-shadow: 0px 1px 2px black;
  }
  
  li{
-   padding: 6px 4px;
    text-decoration: underline;
  }
 
+ .remover{
+   background-color: #A50B25;
+   border-radius: 50%;
+   font-size: 11px;
+   padding: auto;
+   font-weight: bold;
+   border: none;
+ }
+
+ .remover:hover{
+   background-color: #d81535;
+ }
  /* MAIN INTERMEDIARIA */
 
 .intermediaria section {
@@ -185,7 +197,7 @@ main{
 }
 
 .boneco-de-neve{
-   animation: andando 3s infinite;
+   animation: andando 2.5s;
 }
 
  /* MAIN Resultado */
