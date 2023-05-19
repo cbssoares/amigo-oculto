@@ -48,7 +48,7 @@ body{
 
 
  /* MAIN */
-main{
+.principal{
     background-color: gold;
     width: 93vw;
     max-width: 400px;
@@ -87,18 +87,40 @@ main{
     padding: 5px 5px 5px 5px;
     border-radius: 10px;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom:5px;
     width: fit-content;
  }
 
  .contadorp{
    display: flex;
+   padding-top: 5px;
  }
+
+.div-aviso{
+   align-self: flex-start;
+}
+
+.p-aviso {
+   margin-top: -16px;
+   padding-left: 30px;
+   color: red;
+   font-size: 0.75em;
+   text-decoration: underline;
+   font-weight: normal;
+   font-style: italic;
+}
 
  .informador-npessoas{
    margin: 5px;
  }
-
+.div-aviso2{
+   align-self: center;
+}
+.aviso2{
+   margin-top: 0;
+   margin-bottom: -16px;
+   padding-left: 0px;
+}
  /* BOTÃO CONCLUIDO */
 
  .bota{
@@ -154,7 +176,7 @@ main{
    box-shadow: 0px 1px 2px black;
  }
  
- li{
+ .itemlista{
    text-decoration: underline;
  }
 
@@ -251,10 +273,17 @@ main{
       font-size: 3.7em;
    }
 
-   main {
+   .principal {
       max-width: 500px;
    }
+
+   .p-aviso{
+      padding-left: 80px;
+   }
    
+   .aviso2{
+     padding-left: 0px;
+   }
 }
 
 /* DESKTOP */

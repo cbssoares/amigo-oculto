@@ -3,34 +3,47 @@ nome = []
 nome2 = []
 let amig = []
 limite = 0
+aviso = document.querySelector('.p-aviso')
+aviso2 = document.querySelector('.aviso2')
+nominp = document.querySelector('input#nomeinp')
 
 selectOp = document.querySelector('#opcoes')
 mainResul =  document.querySelector('.resultado').classList
 mainPrinc = document.querySelector('.main_inicio').classList
 mainInter = document.querySelector('.intermediaria').classList
 
-document.querySelector('input#nomeinp').addEventListener("keyup", function(e) {
+nominp.addEventListener("keyup", function(e) {
     if (e.code === 'Enter'){
         document.querySelector('input#botao').click()
     }
 })
 
+nominp.addEventListener("click", function() {
+    aviso.innerHTML = ''
+    aviso2.innerHTML = ''
+    
+})
+
 
 function namesave(){
-    nominp = document.querySelector('input#nomeinp')
+  
     if (nominp.value == ""){
-        window.alert('Nome Não inserido')
-    } else {
+        aviso.innerHTML = 'Nome Não inserido!'
+    } else if (nome.indexOf(nominp.value) != -1) {
+            aviso.innerHTML = 'Você já digitou esse nome!'
+        } else{
+        aviso.innerHTML = ''
+        aviso2.innerHTML = ''
         nome[contador1] = nominp.value
         nome2[contador1] = nominp.value
         loop = nome.length
         lista = document.querySelector('#namelist')
-        lista.innerHTML += `<li> ${nome[contador1]}  <input type='button' value='x' class ="remover ${nome[contador1]}"> `
+        lista.innerHTML += `<li class = 'itemlista'> ${nome[contador1]}  <input type='button' value='x' class ="remover ${nome[contador1]}"> `
         function listaMaker(){
             const  itensInp = document.querySelectorAll('.remover')
             function nomeNaLista(){
-                const nomeInp = itensInp[contador2].classList[1]
-                itensInp[contador2].addEventListener("click", function (){nomeRemover(nomeInp)})
+                const Inp = itensInp[contador2].classList[1]
+                itensInp[contador2].addEventListener("click", function (){nomeRemover(Inp)})
             }
                 
             for (contador2 = 0; contador2 < loop; contador2++){
@@ -46,7 +59,7 @@ function namesave(){
             loop = nome.length
             lista.innerHTML = ''
             for (contador2 = 0; contador2 < loop; contador2++){
-                lista.innerHTML += `<li> ${nome[contador2]}  <input type='button' value='x' class ="remover ${nome[contador2]}"> `
+                lista.innerHTML += `<li class ='itemlista'> ${nome[contador2]}  <input type='button' value='x' class ="remover ${nome[contador2]}"> `
                
             }
             listaMaker()
@@ -125,7 +138,7 @@ function telaInter() {
         }
         
     } else{
-        window.alert('Quantidade de participantes insuficiente(min = 3)')
+        aviso2.innerHTML = ' Minimo de particpantes = 3'
     }
 }
 

@@ -15,13 +15,21 @@
     </header>
     <main class="principal main_inicio visivel">
         <section class ="menu">
-                    <div id="nomebot" class="menu_nomebot">
-                        <input type="text" name="nomeinp" id="nomeinp" class="input-texto" minlength="3" placeholder="Digite o nome do participante" required>
-                        <input type="button" value="Enviar" id="botao" class="bota" onclick="namesave()">
-                    </div>
+            <div class="div-aviso">
+                <p class="p-aviso"></p>
+            </div>
+            
+            <div id="nomebot" class="menu_nomebot">
+                <input type="text" name="nomeinp" id="nomeinp" class="input-texto" minlength="3" placeholder="Digite o nome do participante" required>
+                <input type="button" value="Enviar" id="botao" class="bota" onclick="namesave()">
+            </div>
+                   
             <div class="contadorp">
                 <p id="main_info_num_pessoas" class="informador-npessoas"> 0 Participantes</p>
                 <input type="button" id="proxeta" class="bota" onclick="telaInter()" value="Sortear">
+            </div>
+            <div class="div-aviso div-aviso2">
+                <p class="p-aviso aviso2"></p>
             </div>
         </section>
 
