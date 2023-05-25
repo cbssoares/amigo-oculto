@@ -21,6 +21,15 @@ Desktop:992px até 1200px
 Grandes telas: acima de 1200px
 */
 
+
+:root{
+   --corprincipal:  #A50B25;
+
+   --titulo: 'Mountains of Christmas', cursive;
+   --fonteprincipal: 'Changa One', cursive;
+
+}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -38,7 +47,7 @@ body{
 /* TITULO  */
 .titulo_header {
    text-align: center;
-   font-family: 'Mountains of Christmas', cursive;
+   font-family: var(--titulo);
    color: gold;
    font-size: 3em;
    padding: 20px 20px 10px 20px;
@@ -73,7 +82,7 @@ body{
    padding: 20px;
    border-radius: 10px 10px 0px 0px;
    background-color:gold;
-   font-family: 'Changa One', cursive;
+   font-family: var(--fonteprincipal);
  }
 
  input, .input-texto{
@@ -149,7 +158,7 @@ body{
    display: flex ;
    justify-content: center;
    margin: auto;
-   font-family: 'Changa One', cursive;
+   font-family: var(--fonteprincipal);
 }
 
 #sectlist{
@@ -211,7 +220,7 @@ body{
 }
 
 .titulo-inter{
-   font-family: 'Mountains of Christmas', cursive;
+   font-family: var(--titulo);
    font-size: 3em;
    color: #A50B25;
    margin-bottom: 45%;

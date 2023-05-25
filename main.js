@@ -39,17 +39,16 @@ function namesave(){
         loop = nome.length
         lista = document.querySelector('#namelist')
         lista.innerHTML += `<li class = 'itemlista'> ${nome[contador1]}  <input type='button' value='x' class ="remover ${nome[contador1]}"> `
+
         function listaMaker(){
             const  itensInp = document.querySelectorAll('.remover')
-            function nomeNaLista(){
-                const Inp = itensInp[contador2].classList[1]
-                itensInp[contador2].addEventListener("click", function (){nomeRemover(Inp)})
-            }
-                
-            for (contador2 = 0; contador2 < loop; contador2++){
-                    nomeNaLista()
-            }
+            itensInp.forEach(element => {
+                const Inp = element.classList[1]
+                element.addEventListener("click", function (){nomeRemover(Inp)})
+                    
+            });
         }
+                
        listaMaker()
         
         function nomeRemover(listaitem) {
@@ -62,7 +61,9 @@ function namesave(){
                 lista.innerHTML += `<li class ='itemlista'> ${nome[contador2]}  <input type='button' value='x' class ="remover ${nome[contador2]}"> `
                
             }
+
             listaMaker()
+
             document.querySelector('#main_info_num_pessoas').innerHTML = `${loop} Participantes `
             contador1--
         }
