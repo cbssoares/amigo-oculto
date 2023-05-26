@@ -6,17 +6,14 @@ limite = 0
 aviso = document.querySelector('.p-aviso')
 aviso2 = document.querySelector('.aviso2')
 nominp = document.querySelector('input#nomeinp')
+formu = document.querySelector("#nomebot")
+lista = document.querySelector('#namelist')
+
 
 selectOp = document.querySelector('#opcoes')
 mainResul =  document.querySelector('.resultado').classList
 mainPrinc = document.querySelector('.main_inicio').classList
 mainInter = document.querySelector('.intermediaria').classList
-
-nominp.addEventListener("keyup", function(e) {
-    if (e.code === 'Enter'){
-        document.querySelector('input#botao').click()
-    }
-})
 
 nominp.addEventListener("click", function() {
     aviso.innerHTML = ''
@@ -24,9 +21,9 @@ nominp.addEventListener("click", function() {
     
 })
 
+formu.addEventListener("submit", (evento) => {
+    evento.preventDefault()
 
-function namesave(){
-  
     if (nominp.value == ""){
         aviso.innerHTML = 'Nome Não inserido!'
     } else if (nome.indexOf(nominp.value) != -1) {
@@ -37,7 +34,7 @@ function namesave(){
         nome[contador1] = nominp.value
         nome2[contador1] = nominp.value
         loop = nome.length
-        lista = document.querySelector('#namelist')
+       
         lista.innerHTML += `<li class = 'itemlista'> ${nome[contador1]}  <input type='button' value='x' class ="remover ${nome[contador1]}"> `
 
         function listaMaker(){
@@ -74,7 +71,9 @@ function namesave(){
         document.querySelector('#main_info_num_pessoas').innerHTML = `${loop} Participantes `
     }  
     nominp.value = ""   
-}
+})
+
+
     
 
 
