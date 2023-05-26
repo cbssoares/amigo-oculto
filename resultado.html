@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/interface.css">
+
+</head>
+<body>
+    <header>
+        <h1 class="titulo_header"> AMIGO OCULTO</h1>
+    </header>
+    <!-- Tela de resultado -->
+    <main class="principal resultado ">
+        <section class="menu menu-resultado">
+            <div class="menu_nomebot">
+                <select name="" id="opcoes" class="input-texto" onchange="sumirResultado()">
+                    <option value="1" disabled selected hidden>Selecione o Nome do Participante</option>
+                </select>
+               
+            </div>
+            <div>
+                <a href="index.html" target="_parent"><input type="button" value="Voltar" class="bota"></a>
+            </div>
+        </section>
+        <section class="secao_resultado">
+            <div class="container sorteado_container">
+                <p class ="titulo titulo_resultado">Selecione seu nome e passe sobre a area preta para ver seu amigo oculto</p>
+                <p class='resultado_amigo'></p>
+            </div>
+        </section>
+    </main>
+    <script src="js/sortear.js"></script>
+</body>
+</html>

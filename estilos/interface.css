@@ -261,9 +261,11 @@ body{
 }
 .resultado_amigo{
    background-color: black;
+   padding: 0px 20px;
 }
 
 .resultado_amigo:hover{
+   width: fit-content;
    background-color: white;
    text-decoration: underline;
 }
