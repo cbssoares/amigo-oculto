@@ -23,24 +23,17 @@ function listaMaker(){
     const  itensInp = document.querySelectorAll('.remover')
     itensInp.forEach((element) => {
         const Inp = element.classList[1]
-        element.addEventListener("click", function (){nomeRemover(Inp)})
+        element.addEventListener("click", function (){nomeRemover(Inp, element.parentNode)})
             
     });
 }
 
-function nomeRemover(listaitem) {
+function nomeRemover(listaitem, listatirar) {
     tirarI = nome.indexOf(listaitem)
     nome.splice(tirarI, 1)
     nome2.splice(tirarI, 1)
     loop = nome.length
-    lista.innerHTML = ''
-    for (contador2 = 0; contador2 < loop; contador2++){
-        lista.innerHTML += `<li class ='itemlista'> ${nome[contador2]}  <input type='button' value='x' class ="remover ${nome[contador2]}"> `
-       
-    }
-    
-    listaMaker()
-
+    listatirar.remove()
     sessionStorage.setItem("itens", JSON.stringify(nome))
 
     document.querySelector('#main_info_num_pessoas').innerHTML = `${loop} Participantes `
